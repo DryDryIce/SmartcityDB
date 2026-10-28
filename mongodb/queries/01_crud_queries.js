@@ -1,8 +1,6 @@
 use("smartcity_db");
 
-// =========================================================
 // FIND
-// =========================================================
 
 // Buscar todas las lecturas del Bronx
 db.lecturas.find({
@@ -15,9 +13,7 @@ db.lecturas.find({
 });
 
 
-// =========================================================
 // FIND ONE
-// =========================================================
 
 // Buscar una alerta crítica
 db.alertas.findOne({
@@ -25,9 +21,7 @@ db.alertas.findOne({
 });
 
 
-// =========================================================
 // UPDATE ONE
-// =========================================================
 
 // Marcar una alerta como atendida
 db.alertas.updateOne(
@@ -43,12 +37,9 @@ db.alertas.updateOne(
 );
 
 
-// =========================================================
 // UPDATE MANY
-// =========================================================
 
-// Cambiar a cerrado todos los incidentes abiertos
-// de contaminación en Bronx
+// Cambiar a cerrado todos los incidentes abiertos de contaminación en Bronx
 db.incidentes.updateMany(
   {
     categoria: "contaminacion",
@@ -63,12 +54,10 @@ db.incidentes.updateMany(
 );
 
 
-// =========================================================
 // DELETE ONE
-// =========================================================
 
 // Ejemplo académico de eliminación.
-// NO ejecutar todavía sobre nuestros documentos actuales.
+// NO ejecutado sobre nuestros documentos actuales, fue utilizado en tablas prueba
 db.eventos.deleteOne({
   tipo_evento: "contaminacion_alta",
   zona: "Bronx"

@@ -1,6 +1,6 @@
 use("smartcity_db");
 
-// Insertar varias lecturas de ejemplo
+// Insertar varias lecturas
 db.lecturas.insertMany([
   {
     id_sensor: "EPA-BRONX-0110",

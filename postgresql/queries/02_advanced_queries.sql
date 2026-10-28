@@ -1,8 +1,3 @@
--- =========================================================
--- CONSULTAS AVANZADAS - SMARTCITY
--- =========================================================
-
-
 -- 1. CTE: promedio de PM2.5 por zona
 WITH promedio_sensor AS (
     SELECT

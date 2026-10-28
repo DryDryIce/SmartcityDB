@@ -4,9 +4,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 
-# =========================================================
 # CONFIGURACION
-# =========================================================
 
 TARGET_DOCUMENTS = 500_000
 
@@ -103,9 +101,7 @@ SENSORES = {
 }
 
 
-# =========================================================
 # FUNCIONES AUXILIARES
-# =========================================================
 
 def numero_o_none(valor):
     """Convierte una celda numerica a float o None."""
@@ -205,9 +201,7 @@ def cargar_archivo(ruta):
     return documentos
 
 
-# =========================================================
 # CARGA DE DATOS REALES
-# =========================================================
 
 print("Cargando datos meteorologicos...")
 documentos_reales = cargar_archivo(WEATHER_FILE)
@@ -218,9 +212,7 @@ documentos_reales.extend(cargar_archivo(EPA_FILE))
 print(f"Documentos reales cargados: {len(documentos_reales):,}")
 
 
-# =========================================================
 # GENERACION SINTETICA
-# =========================================================
 
 documentos_finales = list(documentos_reales)
 
@@ -254,9 +246,7 @@ while len(documentos_finales) < TARGET_DOCUMENTS:
     indice += 1
 
 
-# =========================================================
 # EXPORTACION JSON LINES
-# =========================================================
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

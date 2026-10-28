@@ -1,8 +1,4 @@
--- =========================================================
--- COBERTURA DE OPERADORES SQL - SMARTCITY
--- =========================================================
-
-
+-- COBERTURA DE OPERADORES SQL
 -- 1. DISTINCT
 -- Distritos diferentes donde existen sensores
 SELECT DISTINCT
